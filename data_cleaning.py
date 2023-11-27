@@ -1,6 +1,11 @@
 import pandas as pd
 import numpy as np
 import os
+from pathlib import Path
+import sys
+
+ROOT_PATH = Path.cwd().__str__()
+sys.path.insert(0, ROOT_PATH)
 
 league_code_dict = {
     '9':'Premier League',
@@ -19,7 +24,7 @@ def add_datetime(data):
     return data
 
 def load_data(seasons_to_load, leagues_to_load):
-    base_dir = "C:/MyDevelopment/Goalscorers/fbref_data/event_data/"
+    base_dir = ROOT_PATH + "/fbref_data/event_data/"
     df_summary = []
     df_possession = []
     
