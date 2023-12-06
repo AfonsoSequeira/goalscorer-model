@@ -4,7 +4,8 @@ import os
 from pathlib import Path
 import sys
 
-ROOT_PATH = Path.cwd().__str__()
+#ROOT_PATH = Path.cwd().__str__()
+ROOT_PATH = 'C:/MyDevelopment/goalscorer-model'
 sys.path.insert(0, ROOT_PATH)
 
 league_code_dict = {
